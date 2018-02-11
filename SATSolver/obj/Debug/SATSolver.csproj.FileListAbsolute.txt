@@ -1,0 +1,6 @@
+C:\Users\maria\source\repos\SATSolver\SATSolver\bin\Debug\SATSolver.exe
+C:\Users\maria\source\repos\SATSolver\SATSolver\bin\Debug\SATSolver.pdb
+C:\Users\maria\source\repos\SATSolver\SATSolver\obj\Debug\SATSolver.csprojResolveAssemblyReference.cache
+C:\Users\maria\source\repos\SATSolver\SATSolver\obj\Debug\SATSolver.csproj.CoreCompileInputs.cache
+C:\Users\maria\source\repos\SATSolver\SATSolver\obj\Debug\SATSolver.exe
+C:\Users\maria\source\repos\SATSolver\SATSolver\obj\Debug\SATSolver.pdb
