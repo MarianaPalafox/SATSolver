@@ -76,9 +76,9 @@ namespace SATSolver
                 Console.WriteLine();
             }
 
-            while (clausulas.Count!=0)
+            for(int d=0; d<clausulas.Count;d++)
             {
-                int d = 0;
+                
                 int pure = clausulas.ElementAt(d).elementos.ElementAt(d);
                 Boolean aparece = false;
                   foreach (clausula k in clausulas)
@@ -116,14 +116,78 @@ namespace SATSolver
                
                 d++;
             }
-           
+
 
             if (clausulas.Count().Equals(0))
             {
                 Console.WriteLine("Solved!!");
             }
+            else {
+                List<clausula> clausulas3 = clausulas;
+                while (clausulas.Count !=0) { 
+                    
+                        for (int u = 0; u < clausulas.Count; u++)
+                        {
+                            int remove = clausulas.ElementAt(u).elementos.ElementAt(0);
+                            Console.WriteLine("Separating clauses with " + remove + " or " + -remove);
+                            if (clausulas.ElementAt(u).elementos.Contains(remove))
+                            {
+                                clausulas3.ElementAt(u).elementos.Remove(remove);
+                            }
+                            if (clausulas.ElementAt(u).elementos.Contains(-remove))
+                            {
+                                clausulas3.ElementAt(u).elementos.Remove(-remove);
 
+                            }
+                            if (clausulas.ElementAt(u).elementos.Count.Equals(0))
+                            {
+                                clausulas3.Remove(clausulas.ElementAt(u));
+                            }
+
+                        foreach (clausula c in clausulas)
+                        {
+                            Console.WriteLine("Remainning clauses");
+                            for (int z = 0; z < c.elementos.Count; z++)
+                            {
+                                Console.Write(c.elementos.ElementAt(z) + "/");
+                            }
+
+                            Console.WriteLine();
+                        }
+                    }
+
+                    
+                }
+            }
+
+
+
+
+            if (clausulas.Count().Equals(0))
+                {
+                    Console.WriteLine("Solved!!");
+                }
+                else
+                {
+                    Console.WriteLine("Can't be solved!!");
+                foreach (clausula c in clausulas)
+                {
+                    Console.WriteLine("Remainning clauses"+clausulas.Count);
+                    for (int z = 0; z < c.elementos.Count; z++)
+                    {
+                        Console.Write(c.elementos.ElementAt(z) + "/");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
             Console.ReadKey();
+                   
+                }
+
+            
+
+           
         }
     }
-}
+
